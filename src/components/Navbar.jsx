@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link} from 'react-router-dom';
 import Logo from '../assets/ecell.svg';
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (typeof window !== 'undefined') {
       const currentScrollY = window.scrollY;
 
@@ -28,11 +28,13 @@ const Navbar = () => {
 
       setLastScrollY(currentScrollY);
     }
-  };
+  }, [lastScrollY]);
 
-  const handleResize = () => {
-    setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
-  };
+  const handleResize = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,7 +48,7 @@ const Navbar = () => {
         window.removeEventListener('resize', handleResize);
       };
     }
-  }, [lastScrollY]);
+  }, [handleScroll, handleResize]);
 
   return (
     <nav
