@@ -24,6 +24,13 @@ import tes23 from "../assets/visit1.webp";
 import bizz2 from "../assets/bizz2.webp";
 import bizz3 from "../assets/bizz3.webp";
 import bizz4 from "../assets/bizz4.webp";
+import SQUIDA from "../assets/SQUID.png";
+import SQUIDB from "../assets/squid r1.jpg";
+import SQUIDC from "../assets/Squidgamec.jpg";
+
+import SQUIDWINNER1 from "../assets/Squidgamewinner.jpg";
+import SQUIDWINNER2 from "../assets/Squidgamewinner2.jpg";
+import SQUIDWINNER3 from "../assets/Squidgamewinnernterclub.jpg";
 
 
 // Sample event data with imported images
@@ -163,7 +170,27 @@ const events = [
         },
         image: bizz25, // cover image (optional fallback)
         images: [ bizz25c , bizz2 , bizz3 , bizz4 , bizz25b],
-    }
+    },
+    {
+        id: 11,
+        title: "SQUID GAME 2025",
+        date: "day : November 24th,25th,26th 2025",
+        descriptionSections: {
+     about: "E-Cell ABES EC brought the global phenomenon to life with SQUID GAME — a high-octane test of nerve, strategy, and survival. Sponsored by Profito, this event transformed the campus into an arena where only the sharpest minds could survive. Students faced off in a series of iconic, tension-filled rounds inspired by the show, adapted to test their presence of mind and decision-making under pressure. From the stillness of 'Red Light, Green Light' to the strategic alliances formed in later rounds, the event was a masterclass in elimination. With over 100+ participants vying for the ultimate prize, only one rule applied: elimination meant game over. The last survivor standing didn't just win a game; they proved they had the resilience to outlast the competition.",
+
+      review: "The campus was buzzing with the intensity of SQUID GAME, earning it a stellar participant rating. Students praised the immersive atmosphere and the seamless execution of the rounds. The integration of Profito as a sponsor added a professional layer to the high-stakes environment. Participants specifically highlighted the psychological thrill of the elimination rounds, noting that it forced them to think on their feet and adapt instantly—skills crucial for both gaming and real-world business scenarios.",
+
+      callout: "SQUID GAME by E-Cell ABES EC was the ultimate battle of wits and resilience, challenging participants to master their fear, strategize under pressure, and outlast the competition in a thrill-ride of survival.",
+
+      vision: "At E-Cell ABES EC, we believe that entrepreneurship is the ultimate survival game. Our vision for SQUID GAME was to gamify the concepts of risk, reward, and competition. By simulating a high-pressure environment where every move counts, we aimed to instill the resilience and strategic thinking required in the startup world. We wanted students to experience the reality that in a competitive market, you must be observant, agile, and ready to pivot to avoid elimination.",
+
+      conclusion: "SQUID GAME marked a bold and electrifying chapter in E-Cell ABES EC’s events calendar. It demonstrated that learning can be intense, engaging, and incredibly fun. The partnership with Profito allowed us to elevate the production quality, ensuring an unforgettable experience for every participant. Beyond the thrill, the event fostered a spirit of healthy competition and mental toughness among the students. As we conclude this chapter, we remain dedicated to bringing more such innovative, boundary-pushing experiences to the student community. The game may be over, but the spirit of survival and strategy ignited here will continue to drive our future leaders."
+        },
+        image: SQUIDA, // cover image (optional fallback)
+        images: [SQUIDB, SQUIDC, SQUIDWINNER1, SQUIDWINNER2, SQUIDWINNER3],
+        
+
+    },
 ];
 
 export default events;
